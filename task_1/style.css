@@ -1,0 +1,133 @@
+* {
+    transition: all 0.4s;
+}
+body {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background: #282c34;
+    font-family: "Helvetica Neue","Helvetica,Arial",sans-serif;
+}
+h1 {
+    margin: 0;
+    color: #1c1c1c;
+    font-weight: 500;
+    font-family: "Helvetica Neue","Helvetica,Arial",sans-serif;
+}
+.auth-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: whitesmoke;
+    gap: 20px;
+    width: 370px;
+    padding: 30px;
+    margin-top: 120px;
+    border-radius: 30px;
+}
+.logo {
+    display: flex;
+    gap: 20px;
+    height: 40px;
+}
+.logo_image {
+    max-height: 100%;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+input {
+    border: 2px solid lightgray;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 17px;
+    font-family: "Helvetica Neue","Helvetica,Arial",sans-serif;
+    padding: 20px;
+    background: inherit;
+}
+input:focus {
+    outline: #1c1c1c;
+    border-color: #1c1c1c;
+}
+button {
+    border-radius: 20px;
+    border: none;
+    height: 50px;
+    font-size: 17px;
+    font-family: "Helvetica Neue","Helvetica,Arial",sans-serif;
+    padding: 10px;
+    width: 240px;
+    cursor: pointer;
+    background: #1c1c1c;
+    color: whitesmoke;
+}
+button:hover {
+    background: black;
+}
+.popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,1);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup-bg.active {
+    opacity: 0.5;
+    pointer-events: all;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: whitesmoke;
+    color: #1c1c1c;
+    width: 600px;
+    height: 500px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: "Helvetica Neue","Helvetica,Arial",sans-serif;
+    border-radius: 30px;
+}
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.hint {
+    font-family: "Helvetica Neue","Helvetica,Arial",sans-serif;
+    font-size: 12px;
+    color: red;
+    display: none;
+    padding: 0 20px;
+}
+.hint.active {
+    display: block;
+}

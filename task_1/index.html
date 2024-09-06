@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="auth-block">
+    <div class="logo">
+        <img class="logo_image" src="https://zenclass-files-hot-01.storage.yandexcloud.net/d68a9af2-0450-42ac-82cb-42b107cd1ebd.png" alt="">
+        <h1 class="logo_title">Y_LAB_University</h1>
+    </div>
+    <form id="auth-form">
+        <div class="inputs">
+            <div class="email input">
+                <label for="emailInput"></label><input id="emailInput" type="email" placeholder="email" required />
+                <div id="emailInput-hint" class="hint">Нет такого аккаунта</div>
+            </div>
+            <div class="password input">
+                <label for="passwordInput"></label><input id="passwordInput" type="password" placeholder="Введите пароль" required/>
+                <div id="passwordInput-hint" class="hint">Неверный пароль</div>
+            </div>
+        </div>
+        <button type="submit">Войти</button>
+    </form>
+</div>
+<div class="popup-bg" id="popup-bg">
+</div>
+<div class="popup" id="popup">
+    <h1>Успех!</h1>
+    <button id="close">Закрыть</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
